@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+	<pkgmetadata>
+	<maintainer type="person">
+		<email>creeper844@gmail.com</email>
+		<description>Riey</description>
+	</maintainer>
+	<longdescription lang="en">
+	</longdescription>
+	<upstream>
+		<remote-id type="github">dell/dkms</remote-id>
+	</upstream>
+</pkgmetadata>
