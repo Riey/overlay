@@ -194,5 +194,5 @@ src_compile() {
 }
 
 src_install() {
-	cargo_src_install --path ./crates/rust-analyzer
+	dobin target/release/rust-analyzer
 }
