@@ -7,8 +7,7 @@ inherit eutils desktop
 
 DESCRIPTION="Multiplatform Visual Studio Code from Microsoft"
 HOMEPAGE="https://code.visualstudio.com"
-BASE_URI="https://vscode-update.azurewebsites.net/${PV}"
-SRC_URI="${BASE_URI}/linux-x64/stable -> ${P}-amd64.tar.gz"
+SRC_URI="https://update.code.visualstudio.com/${PV}/linux-x64/stable -> ${P}-amd64.tar.gz"
 RESTRICT="mirror strip bindist"
 
 LICENSE="MIT"
@@ -17,7 +16,7 @@ KEYWORDS="amd64"
 DEPEND=">=gnome-base/gconf-3.2.6-r4:2
 >=media-libs/libpng-1.2.46:0
 >=x11-libs/cairo-1.14.12:0
->=x11-libs/gtk+-2.24.31-r1:2
+x11-libs/gtk+:3
 >=x11-libs/libXtst-1.2.3:0"
 
 RDEPEND="${DEPEND}
