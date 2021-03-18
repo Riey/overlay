@@ -270,6 +270,7 @@ src_install() {
 	fi
 
 	if (use indicator); then
+		dobin target/release/kime-indicator
 		domenu res/kime-indicator.desktop
 	fi
 
@@ -298,15 +299,15 @@ src_install() {
 }
 
 pkg_postinst() {
-	xdg_desktop_database_update
 	xdg_icon_cache_update
+	xdg_desktop_database_update
 	use gtk && gnome2_query_immodules_gtk3
 	use gtk2 && gnome2_query_immodules_gtk2
 }
 
 pkg_postrm() {
-	xdg_desktop_database_update
 	xdg_icon_cache_update
+	xdg_desktop_database_update
 	use gtk && gnome2_query_immodules_gtk3
 	use gtk2 && gnome2_query_immodules_gtk2
 }
