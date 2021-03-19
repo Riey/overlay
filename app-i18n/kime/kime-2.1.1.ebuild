@@ -177,7 +177,7 @@ RESTRICT="mirror"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~arm64 ~arm ~hppa ~ppc ~ppc64"
+KEYWORDS="amd64 x86 arm64 arm ppc64"
 
 IUSE="
 	X
@@ -201,9 +201,7 @@ DEPEND="
 	qt? ( dev-qt/qtgui )
 "
 RDEPEND="${DEPEND}"
-BDEPEND="
-
-"
+BDEPEND=""
 CMAKE_USE_DIR="${S}/src"
 BUILD_DIR="${WORKDIR}/${P}_build"
 QA_SONAME=(
