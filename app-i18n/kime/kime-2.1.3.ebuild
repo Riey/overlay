@@ -9,7 +9,7 @@ CRATES="
 ahash-0.7.2
 ansi_term-0.11.0
 ansi_term-0.12.1
-anyhow-1.0.38
+anyhow-1.0.39
 array-macro-1.0.5
 atty-0.2.14
 autocfg-1.0.1
@@ -64,10 +64,10 @@ itertools-0.9.0
 itertools-0.10.0
 itoa-0.4.7
 jobserver-0.1.21
-ksni-0.1.2
+ksni-0.1.3
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.89
+libc-0.2.90
 libdbus-sys-0.2.1
 libgit2-sys-0.12.18+1.1.0
 libz-sys-1.1.2
@@ -183,7 +183,7 @@ IUSE="
 	X
 	+check
 	+indicator
-	fast-keymap
+	+fast-keymap
 	gtk
 	gtk2
 	qt
@@ -315,4 +315,3 @@ pkg_postrm() {
 	use gtk && gnome2_query_immodules_gtk3
 	use gtk2 && gnome2_query_immodules_gtk2
 }
-
