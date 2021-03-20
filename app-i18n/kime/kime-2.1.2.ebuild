@@ -183,6 +183,7 @@ IUSE="
 	X
 	+check
 	+indicator
+	fast-keymap
 	gtk
 	gtk2
 	qt
@@ -233,7 +234,12 @@ src_configure() {
 }
 
 src_compile() {
-	local cargopkgs=(-pkime-engine-capi -pkime-engine-cffi)
+	local cargopkgs=(-pkime-engine-cffi)
+	if (use fast-keymap); then
+		cargo_src_compile --manifest-path=src/engine/capi/Cargo.toml --features=kime-engine-core/array-keymap
+	else
+		cargopkgs+=(-pkime-engine-capi)
+	fi
 	if (use X); then
 		cargopkgs+=(-pkime-xim)
 	fi
