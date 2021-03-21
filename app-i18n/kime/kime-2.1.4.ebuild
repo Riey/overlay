@@ -24,6 +24,7 @@ cfg-if-1.0.0
 chrono-0.4.19
 clang-sys-1.1.1
 clap-2.33.3
+ctor-0.1.19
 cty-0.2.1
 darling-0.12.2
 darling_core-0.12.2
@@ -31,6 +32,7 @@ darling_macro-0.12.2
 dbus-0.9.2
 dbus-codegen-0.9.1
 dbus-tree-0.9.0
+diff-0.1.12
 downcast-rs-1.2.0
 dtoa-0.4.7
 either-1.6.1
@@ -86,6 +88,7 @@ num-derive-0.3.3
 num-integer-0.1.44
 num-traits-0.2.14
 once_cell-1.7.2
+output_vt100-0.1.2
 pad-0.1.6
 peeking_take_while-0.1.2
 percent-encoding-2.1.0
@@ -94,6 +97,7 @@ pin-project-lite-0.2.6
 pin-utils-0.1.0
 pkg-config-0.3.19
 ppv-lite86-0.2.10
+pretty_assertions-0.7.1
 proc-macro-crate-0.1.5
 proc-macro-error-1.0.4
 proc-macro-error-attr-1.0.4
@@ -315,3 +319,4 @@ pkg_postrm() {
 	use gtk && gnome2_query_immodules_gtk3
 	use gtk2 && gnome2_query_immodules_gtk2
 }
+
