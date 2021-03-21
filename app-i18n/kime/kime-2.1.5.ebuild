@@ -15,8 +15,12 @@ atty-0.2.14
 autocfg-1.0.1
 bindgen-0.57.0
 bitflags-1.2.1
+bstr-0.2.15
+bumpalo-3.6.1
+byteorder-1.4.3
 cairo-rs-0.9.1
 cairo-sys-rs-0.10.0
+cast-0.2.3
 cbindgen-0.18.0
 cc-1.0.67
 cexpr-0.4.0
@@ -24,6 +28,14 @@ cfg-if-1.0.0
 chrono-0.4.19
 clang-sys-1.1.1
 clap-2.33.3
+criterion-0.3.4
+criterion-plot-0.4.3
+crossbeam-channel-0.5.0
+crossbeam-deque-0.8.0
+crossbeam-epoch-0.9.3
+crossbeam-utils-0.8.3
+csv-1.1.6
+csv-core-0.1.10
 ctor-0.1.19
 cty-0.2.1
 darling-0.12.2
@@ -56,6 +68,7 @@ glib-macros-0.10.1
 glib-sys-0.10.1
 glob-0.3.0
 gobject-sys-0.10.0
+half-1.7.1
 hashbrown-0.9.1
 heck-0.3.2
 hermit-abi-0.1.18
@@ -66,6 +79,7 @@ itertools-0.9.0
 itertools-0.10.0
 itoa-0.4.7
 jobserver-0.1.21
+js-sys-0.3.49
 ksni-0.1.3
 lazy_static-1.4.0
 lazycell-1.3.0
@@ -78,6 +92,7 @@ log-0.4.14
 maplit-1.0.2
 matches-0.1.8
 memchr-2.3.4
+memoffset-0.6.1
 mio-0.7.10
 mio-timerfd-0.2.0
 miow-0.3.6
@@ -87,7 +102,9 @@ ntapi-0.3.6
 num-derive-0.3.3
 num-integer-0.1.44
 num-traits-0.2.14
+num_cpus-1.13.0
 once_cell-1.7.2
+oorandom-11.1.3
 output_vt100-0.1.2
 pad-0.1.6
 peeking_take_while-0.1.2
@@ -96,6 +113,9 @@ pico-args-0.4.0
 pin-project-lite-0.2.6
 pin-utils-0.1.0
 pkg-config-0.3.19
+plotters-0.3.0
+plotters-backend-0.3.0
+plotters-svg-0.3.0
 ppv-lite86-0.2.10
 pretty_assertions-0.7.1
 proc-macro-crate-0.1.5
@@ -110,13 +130,22 @@ rand-0.8.3
 rand_chacha-0.3.0
 rand_core-0.6.2
 rand_hc-0.3.0
+rayon-1.5.0
+rayon-core-1.9.0
 redox_syscall-0.2.5
 regex-1.4.5
+regex-automata-0.1.9
 regex-syntax-0.6.23
 remove_dir_all-0.5.3
 rustc-hash-1.1.0
+rustc_version-0.2.3
 ryu-1.0.5
+same-file-1.0.6
+scopeguard-1.1.0
+semver-0.9.0
+semver-parser-0.7.0
 serde-1.0.124
+serde_cbor-0.11.1
 serde_derive-1.0.124
 serde_json-1.0.64
 serde_yaml-0.8.17
@@ -140,6 +169,7 @@ textwrap-0.11.0
 thiserror-1.0.24
 thiserror-impl-1.0.24
 time-0.1.43
+tinytemplate-1.2.1
 tinyvec-1.1.1
 tinyvec_macros-0.1.0
 toml-0.5.8
@@ -153,12 +183,19 @@ vcpkg-0.2.11
 vec_map-0.8.2
 version-compare-0.0.10
 version_check-0.9.3
+walkdir-2.3.1
 wasi-0.10.2+wasi-snapshot-preview1
+wasm-bindgen-0.2.72
+wasm-bindgen-backend-0.2.72
+wasm-bindgen-macro-0.2.72
+wasm-bindgen-macro-support-0.2.72
+wasm-bindgen-shared-0.2.72
 wayland-client-0.28.5
 wayland-commons-0.28.5
 wayland-protocols-0.28.5
 wayland-scanner-0.28.5
 wayland-sys-0.28.5
+web-sys-0.3.49
 winapi-0.3.9
 winapi-i686-pc-windows-gnu-0.4.0
 winapi-util-0.1.5
@@ -187,7 +224,6 @@ IUSE="
 	X
 	+check
 	+indicator
-	+fast-keymap
 	gtk
 	gtk2
 	qt
@@ -238,12 +274,7 @@ src_configure() {
 }
 
 src_compile() {
-	local cargopkgs=(-pkime-engine-cffi)
-	if (use fast-keymap); then
-		cargo_src_compile --manifest-path=src/engine/capi/Cargo.toml --features=kime-engine-core/array-keymap
-	else
-		cargopkgs+=(-pkime-engine-capi)
-	fi
+	local cargopkgs=(-pkime-engine-capi -pkime-engine-cffi)
 	if (use X); then
 		cargopkgs+=(-pkime-xim)
 	fi
