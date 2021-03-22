@@ -203,7 +203,7 @@ winapi-wsapoll-0.1.1
 winapi-x86_64-pc-windows-gnu-0.4.0
 x11rb-0.8.1
 xdg-2.2.0
-xim-0.1.0
+xim-0.1.1
 xim-ctext-0.1.0
 xim-parser-0.1.0
 xml-rs-0.8.3
