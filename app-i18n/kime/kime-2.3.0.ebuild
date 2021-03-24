@@ -36,7 +36,7 @@ crossbeam-epoch-0.9.3
 crossbeam-utils-0.8.3
 csv-1.1.6
 csv-core-0.1.10
-ctor-0.1.19
+ctor-0.1.20
 cty-0.2.1
 darling-0.12.2
 darling_core-0.12.2
@@ -83,7 +83,7 @@ js-sys-0.3.49
 ksni-0.1.3
 lazy_static-1.4.0
 lazycell-1.3.0
-libc-0.2.90
+libc-0.2.91
 libdbus-sys-0.2.1
 libgit2-sys-0.12.18+1.1.0
 libz-sys-1.1.2
@@ -93,9 +93,9 @@ maplit-1.0.2
 matches-0.1.8
 memchr-2.3.4
 memoffset-0.6.1
-mio-0.7.10
+mio-0.7.11
 mio-timerfd-0.2.0
-miow-0.3.6
+miow-0.3.7
 nix-0.20.0
 nom-5.1.2
 ntapi-0.3.6
@@ -144,9 +144,9 @@ same-file-1.0.6
 scopeguard-1.1.0
 semver-0.9.0
 semver-parser-0.7.0
-serde-1.0.124
+serde-1.0.125
 serde_cbor-0.11.1
-serde_derive-1.0.124
+serde_derive-1.0.125
 serde_json-1.0.64
 serde_yaml-0.8.17
 shadow-rs-0.5.24
@@ -154,7 +154,6 @@ shlex-0.1.1
 simplelog-0.9.0
 slab-0.4.2
 smallvec-1.6.1
-socket2-0.3.19
 strsim-0.8.0
 strsim-0.10.0
 strum-0.18.0
@@ -183,7 +182,7 @@ vcpkg-0.2.11
 vec_map-0.8.2
 version-compare-0.0.10
 version_check-0.9.3
-walkdir-2.3.1
+walkdir-2.3.2
 wasi-0.10.2+wasi-snapshot-preview1
 wasm-bindgen-0.2.72
 wasm-bindgen-backend-0.2.72
