@@ -17,6 +17,10 @@ DEPEND=""
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
+PATCHES=(
+	"${FILESDIR}/ZEN3-test4.patch"
+	)
+
 pkg_setup() {
 	if use kernel_linux; then
 		BUILD_TARGETS="clean modules"

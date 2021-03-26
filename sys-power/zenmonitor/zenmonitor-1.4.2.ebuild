@@ -3,6 +3,8 @@
 
 EAPI=7
 
+inherit desktop
+
 DESCRIPTION="Monitering software for AMD Zen-based CPUs"
 HOMEPAGE="https://github.com/ocerman/zenmonitor"
 SRC_URI="${HOMEPAGE}/archive/refs/tags/v${PV}.tar.gz"
@@ -23,7 +25,8 @@ src_compile() {
 }
 
 src_install() {
-	PREFIX="${D}/usr" emake install
-	setcap cap_sys_rawio,cap_dac_read_search+ep "${D}/usr/bin/zenmonitor"
+	make_desktop_entry /usr/bin/zenmonitor zenmonitor
+	setcap cap_sys_rawio,cap_dac_read_search+ep ./zenmonitor
+	dobin ./zenmonitor
 }
 
