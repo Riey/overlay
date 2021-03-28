@@ -28,7 +28,6 @@ chalk-ir-0.60.0
 chalk-recursive-0.60.0
 chalk-solve-0.60.0
 chrono-0.4.19
-cmake-0.1.45
 countme-2.0.4
 cov-mark-1.1.0
 crc32fast-1.2.1
@@ -114,7 +113,7 @@ redox_syscall-0.2.5
 regex-1.4.3
 regex-automata-0.1.9
 regex-syntax-0.6.22
-rowan-0.12.6
+rowan-0.13.0-pre.2
 rustc-ap-rustc_lexer-710.0.0
 rustc-demangle-0.1.18
 rustc-hash-1.1.0
@@ -152,7 +151,7 @@ tracing-serde-0.1.2
 tracing-subscriber-0.2.16
 tracing-tree-0.1.9
 ucd-trie-0.1.3
-ungrammar-1.11.0
+ungrammar-1.13.0
 unicase-2.6.0
 unicode-bidi-0.3.4
 unicode-normalization-0.1.17
@@ -199,3 +198,4 @@ src_compile() {
 src_install() {
 	dobin target/release/rust-analyzer
 }
+
