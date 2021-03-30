@@ -182,7 +182,9 @@ SLOT="0"
 
 DEPEND=""
 RDEPEND="${DEPEND}"
-BDEPEND=""
+BDEPEND="
+	>=virtual/rust-1.51.0
+"
 
 src_unpack() {
 	default
