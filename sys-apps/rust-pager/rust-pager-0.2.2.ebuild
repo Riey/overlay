@@ -22,11 +22,10 @@ getrandom-0.2.2
 hermit-abi-0.1.18
 instant-0.1.9
 lazy_static-1.4.0
-libc-0.2.91
+libc-0.2.92
 lock_api-0.4.2
 log-0.4.14
 log-panics-2.0.0
-memchr-2.3.4
 memoffset-0.6.3
 mio-0.7.11
 miow-0.3.7
@@ -51,6 +50,7 @@ simplelog-0.10.0
 smallvec-1.6.1
 termcolor-1.1.2
 time-0.1.43
+unicode-width-0.1.8
 unicode-xid-0.2.1
 utf8parse-0.2.0
 version_check-0.9.3
@@ -61,7 +61,6 @@ winapi-0.3.9
 winapi-i686-pc-windows-gnu-0.4.0
 winapi-util-0.1.5
 winapi-x86_64-pc-windows-gnu-0.4.0
-${P}
 "
 
 inherit cargo
