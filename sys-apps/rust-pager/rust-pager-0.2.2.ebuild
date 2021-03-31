@@ -61,6 +61,7 @@ winapi-0.3.9
 winapi-i686-pc-windows-gnu-0.4.0
 winapi-util-0.1.5
 winapi-x86_64-pc-windows-gnu-0.4.0
+${P}
 "
 
 inherit cargo
