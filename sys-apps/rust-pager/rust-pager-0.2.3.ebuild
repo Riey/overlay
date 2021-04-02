@@ -38,7 +38,7 @@ once_cell-1.7.2
 parking_lot-0.11.1
 parking_lot_core-0.8.3
 pico-args-0.4.0
-proc-macro2-1.0.24
+proc-macro2-1.0.26
 quote-1.0.9
 rayon-1.5.0
 rayon-core-1.9.0
