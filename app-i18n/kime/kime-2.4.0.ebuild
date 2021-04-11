@@ -260,7 +260,7 @@ src_configure() {
 }
 
 src_compile() {
-	local cargopkgs=(-pkime-engine-capi -pkime-engine-cffi)
+	local cargopkgs=(-pkime -pkime-engine-capi -pkime-engine-cffi)
 	if (use X); then
 		cargopkgs+=(-pkime-xim)
 	fi
@@ -279,15 +279,15 @@ src_compile() {
 
 src_install() {
 	dolib.so target/release/libkime_engine.so
+	dobin target/release/kime
+	domenu res/kime.desktop
 
 	if (use X); then
 		dobin target/release/kime-xim
-		domenu res/kime-xim.desktop
 	fi
 
 	if (use wayland); then
 		dobin target/release/kime-wayland
-		domenu res/kime-wayland.desktop
 	fi
 
 	if (use check); then
@@ -296,7 +296,6 @@ src_install() {
 
 	if (use indicator); then
 		dobin target/release/kime-indicator
-		domenu res/kime-indicator.desktop
 	fi
 
 	insopts -m0644
