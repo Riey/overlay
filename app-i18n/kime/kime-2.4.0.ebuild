@@ -301,6 +301,7 @@ src_install() {
 	insopts -m0644
 	insinto /etc/xdg/kime
 	newins res/default_config.yaml config.yaml
+        newins res/default_daemon.yaml daemon.yaml
 
 	doicon -s 64x64 res/icons/64x64/*
 
