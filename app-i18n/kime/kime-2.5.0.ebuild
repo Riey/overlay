@@ -260,7 +260,7 @@ src_configure() {
 }
 
 src_compile() {
-	local cargopkgs=(-pkime -pkime-config -pkime-engine-capi -pkime-engine-cffi)
+	local cargopkgs=(-pkime -pkime-engine-capi -pkime-engine-cffi)
 	if (use X); then
 		cargopkgs+=(-pkime-xim)
 	fi
@@ -335,4 +335,3 @@ pkg_postrm() {
 	use gtk && gnome2_query_immodules_gtk3
 	use gtk2 && gnome2_query_immodules_gtk2
 }
-
