@@ -214,6 +214,7 @@ IUSE="
 	gtk2
 	qt
 	wayland
+	doc
 "
 DEPEND="
 	X? (
@@ -298,9 +299,16 @@ src_install() {
 		dobin target/release/kime-indicator
 	fi
 
+	if (use doc); then
+		dodoc res/default_config.yaml
+		dodoc LICENSE
+		dodoc NOTICE.md
+		dodoc README.md
+		dodoc README.ko.md
+		dodoc docs/CHANGELOG.md
+	fi
+
 	insopts -m0644
-	insinto /etc/xdg/kime
-	newins res/default_config.yaml config.yaml
 
 	doicon -s 64x64 res/icons/64x64/*
 
