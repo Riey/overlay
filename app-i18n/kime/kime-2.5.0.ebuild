@@ -20,7 +20,7 @@ bumpalo-3.6.1
 byteorder-1.4.3
 cairo-rs-0.9.1
 cairo-sys-rs-0.10.0
-cast-0.2.3
+cast-0.2.4
 cbindgen-0.19.0
 cc-1.0.67
 cexpr-0.4.0
@@ -30,7 +30,7 @@ clang-sys-1.2.0
 clap-2.33.3
 criterion-0.3.4
 criterion-plot-0.4.3
-crossbeam-channel-0.5.0
+crossbeam-channel-0.5.1
 crossbeam-deque-0.8.0
 crossbeam-epoch-0.9.3
 crossbeam-utils-0.8.3
@@ -55,12 +55,12 @@ enum-map-derive-0.5.0
 enumset-1.0.6
 enumset_derive-0.5.4
 fnv-1.0.7
-futures-channel-0.3.13
-futures-core-0.3.13
-futures-executor-0.3.13
-futures-macro-0.3.13
-futures-task-0.3.13
-futures-util-0.3.13
+futures-channel-0.3.14
+futures-core-0.3.14
+futures-executor-0.3.14
+futures-macro-0.3.14
+futures-task-0.3.14
+futures-util-0.3.14
 gethostname-0.2.1
 getrandom-0.2.2
 glib-0.10.3
@@ -260,7 +260,7 @@ src_configure() {
 }
 
 src_compile() {
-	local cargopkgs=(-pkime -pkime-engine-capi -pkime-engine-cffi)
+	local cargopkgs=(-pkime -pkime-config -pkime-engine-capi -pkime-engine-cffi)
 	if (use X); then
 		cargopkgs+=(-pkime-xim)
 	fi
@@ -301,7 +301,6 @@ src_install() {
 	insopts -m0644
 	insinto /etc/xdg/kime
 	newins res/default_config.yaml config.yaml
-        newins res/default_daemon.yaml daemon.yaml
 
 	doicon -s 64x64 res/icons/64x64/*
 
