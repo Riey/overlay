@@ -20,7 +20,7 @@ bumpalo-3.6.1
 byteorder-1.4.3
 cairo-rs-0.9.1
 cairo-sys-rs-0.10.0
-cast-0.2.4
+cast-0.2.5
 cbindgen-0.19.0
 cc-1.0.67
 cexpr-0.4.0
@@ -37,8 +37,7 @@ crossbeam-utils-0.8.3
 csv-1.1.6
 csv-core-0.1.10
 ctor-0.1.20
-ctrlc-3.1.8
-cty-0.2.1
+ctrlc-3.1.9
 daemonize-0.4.1
 darling-0.12.3
 darling_core-0.12.3
@@ -126,7 +125,7 @@ rand_core-0.6.2
 rand_hc-0.3.0
 rayon-1.5.0
 rayon-core-1.9.0
-redox_syscall-0.2.5
+redox_syscall-0.2.6
 regex-1.4.5
 regex-automata-0.1.9
 regex-syntax-0.6.23
