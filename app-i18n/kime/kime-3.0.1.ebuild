@@ -398,7 +398,7 @@ DEPEND="
 		sys-apps/dbus
 	)
 	gtk? ( x11-libs/gtk+:3 )
-	gtk4? ( x11-libs/gtk )
+	gtk4? ( gui-libs/gtk )
 	qt? ( dev-qt/qtgui )
 "
 RDEPEND="${DEPEND}"
